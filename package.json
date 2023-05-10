@@ -1,0 +1,30 @@
+{
+  "name": "yulia_chumak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "rimraf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "4.14.0",
+    "dotenv": "^16.0.3",
+    "prisma": "^4.14.0",
+    "prisma-client": "^0.0.0",
+    "tdl": "^7.2.0",
+    "tdl-tdlib-addon": "^1.2.2",
+    "ts-is-present": "^1.2.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.2",
+    "rimraf": "^5.0.0",
+    "tdlib-types": "^0.1001008.1",
+    "typescript": "^5.0.4"
+  }
+}

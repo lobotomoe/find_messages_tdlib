@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model Message {
+    id        BigInt   @id @unique
+    date      DateTime @default(now())
+    channel   Channel  @relation(fields: [channelId], references: [id], onDelete: Cascade)
+    channelId BigInt
+    messageId BigInt
+    content   String
+}
+
+model Channel {
+    id        BigInt    @id @unique
+    title     String
+    createdAt DateTime  @default(now())
+    messages  Message[]
+    isPrivate Boolean   @default(false)
+    username  String?
+}

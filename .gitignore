@@ -1,0 +1,9 @@
+.env
+node_modules/
+dist
+_td_database/
+_td_files/
+*.db
+*.db-journal
+data/
+.data/
